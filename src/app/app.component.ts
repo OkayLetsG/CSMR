@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import Database from "@tauri-apps/plugin-sql";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'CSMR';
+
 }

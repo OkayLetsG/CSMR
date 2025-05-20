@@ -6,6 +6,15 @@
     "main"
   ],
   "permissions": [
-    "core:default"
+    "core:default",
+    "core:event:allow-emit",
+    "core:event:allow-listen",
+    "core:event:allow-emit-to",
+    "core:event:allow-unlisten",
+    "sql:default",
+    "sql:allow-execute",
+    "sql:allow-load",
+    "sql:allow-select",
+    "window-state:default"
   ]
 }

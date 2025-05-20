@@ -1,8 +1,8 @@
 [package]
 name = "app"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "CSMRemasterd (Code Snippet Manager Remasterd)"
+authors = ["Ghaleb Chaalan"]
 license = ""
 repository = ""
 edition = "2021"
@@ -23,6 +23,12 @@ serde = { version = "1.0", features = ["derive"] }
 log = "0.4"
 tauri = { version = "2.5.0", features = [] }
 tauri-plugin-log = "2.0.0-rc"
+tauri-plugin-sql = { version = "2", features = ["sqlite"] }
 
 [target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
 tauri-plugin-window-state = "2"
+
+[profile.release.package.wry]
+debug = true
+debug-assertions = true
+
