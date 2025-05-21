@@ -2,9 +2,9 @@
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "csmr",
   "version": "0.1.0",
-  "identifier": "com.csmr.dev",
+  "identifier": "com.csmremasterd.dev",
   "build": {
-    "frontendDist": "../dist",
+    "frontendDist": "../dist/csmr/browser",
     "devUrl": "http://localhost:46999",
     "beforeDevCommand": "npm run start",
     "beforeBuildCommand": "npm run build"
