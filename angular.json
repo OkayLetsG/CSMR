@@ -29,6 +29,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/app/resources/flat/SVG",
+                "output": "/assets/icons/SVG"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/app/resources/flat/PNG",
+                "output": "/assets/icons/PNG"
               }
             ],
             "styles": [
