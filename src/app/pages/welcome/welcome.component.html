@@ -1,1 +1,17 @@
-<p>welcome works!</p>
+<nz-splitter>
+  <nz-splitter-panel [nzMin]="'15%'" [nzDefaultSize]="'20%'">
+    <div class="box">
+      <app-folders></app-folders>
+    </div>
+  </nz-splitter-panel>
+  <nz-splitter-panel [nzMin]="'15%'" [nzDefaultSize]="'20%'">
+    <div class="box">
+      <app-snippets></app-snippets>
+    </div>
+  </nz-splitter-panel>
+  <nz-splitter-panel [nzMin]="'30%'" [nzDefaultSize]="'60%'">
+    <div class="box">
+      <app-editor></app-editor>
+    </div>
+  </nz-splitter-panel>
+</nz-splitter>
