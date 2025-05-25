@@ -1,14 +1,29 @@
+<nz-button-group>
+  <button nz-button nzType="primary"><nz-icon nzType="folder-add"/></button>
+  <button nz-button nzType="primary"><nz-icon nzType="edit"/></button>
+  <button nz-button nzType="primary"><nz-icon nzType="delete"/></button>
+</nz-button-group>
+
 <nz-input-group [nzSuffix]="suffixIcon">
   <input type="text" nz-input placeholder="Folders" ngModel (ngModelChange)="searchValue$.next($event)" />
 </nz-input-group>
 <ng-template #suffixIcon>
   <nz-icon nzType="search" />
+  <nz-icon nzType="close" (click)="searchValue$.next('')"></nz-icon>
 </ng-template>
 
-<nz-tree-view [nzTreeControl]="treeControl" [nzDataSource]="dataSource" nzNoAnimation>
+<nz-tree-virtual-scroll-view [nzTreeControl]="treeControl" [nzDataSource]="dataSource" nzNoAnimation class="virtual-scroll-tree">
   <nz-tree-node *nzTreeNodeDef="let node" nzTreeNodePadding>
     <nz-tree-node-toggle nzTreeNodeNoopToggle></nz-tree-node-toggle>
     <span [innerHTML]="node.name | nzHighlight: searchValue : 'i' : 'highlight'"></span>
+    <p
+      [innerHTML]="node.name | nzHighlight: searchValue : 'i' : 'highlight'"
+      nz-typography
+      nzEditable
+      nzEditIcon="highlight"
+      nzEditTooltip="click to edit text"
+      [(nzContent)]="node.name"
+    ></p>
   </nz-tree-node>
 
   <nz-tree-node *nzTreeNodeDef="let node; when: hasChild" nzTreeNodePadding>
@@ -17,4 +32,4 @@
     </nz-tree-node-toggle>
     <span [innerHTML]="node.name | nzHighlight: searchValue : 'i' : 'highlight'"></span>
   </nz-tree-node>
-</nz-tree-view>
+</nz-tree-virtual-scroll-view>

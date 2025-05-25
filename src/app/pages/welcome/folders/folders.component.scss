@@ -5,3 +5,11 @@ nz-input-group {
 ::ng-deep .highlight {
   color: #f50;
 }
+
+.virtual-scroll-tree {
+  height: 200px;
+}
+
+p[nz-typography] {
+  margin-bottom: 1em;
+}

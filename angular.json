@@ -39,6 +39,11 @@
                 "glob": "**/*",
                 "input": "src/app/resources/flat/PNG",
                 "output": "/assets/icons/PNG"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
               }
             ],
             "styles": [

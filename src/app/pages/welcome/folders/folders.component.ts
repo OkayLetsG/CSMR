@@ -10,10 +10,12 @@ import { NzNoAnimationDirective } from 'ng-zorro-antd/core/no-animation';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzTreeFlatDataSource, NzTreeFlattener, NzTreeViewModule } from 'ng-zorro-antd/tree-view';
+import { NzTypographyModule } from 'ng-zorro-antd/typography'
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @Component({
   selector: 'app-folders',
-  imports: [FormsModule, NzInputModule, NzIconModule, NzTreeViewModule, NzNoAnimationDirective, NzHighlightPipe],
+  imports: [FormsModule, NzInputModule, NzIconModule, NzTreeViewModule, NzNoAnimationDirective, NzHighlightPipe, NzTypographyModule, NzButtonModule],
   templateUrl: './folders.component.html',
   styleUrl: './folders.component.scss'
 })
